@@ -11,6 +11,10 @@
 html,body {
     font-family: Roboto;
 }
+.heading{
+    color: #ef5222f6;
+    text-shadow:0 0 10px #f27751 ;
+}
 .container {
     display: flex;
     flex-direction: column;
