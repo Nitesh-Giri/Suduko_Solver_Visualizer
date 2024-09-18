@@ -1,0 +1,105 @@
+:root{
+    --box-size : 80px;
+    --sub-green-background: #C8E6C9;
+    --green-background: #A5D6A7;
+    --green-border: #1B5E20;
+    --sub-red-background: #ffcdd2;
+    --red-background: #da6565bd;
+    --red-border: #b71c1c;
+    --disabled-background: #B0BEC5;
+}
+html,body {
+    font-family: Roboto;
+    background-color: #090b18;
+}
+.heading{
+    color: #ef5222f6;
+    text-shadow:0 0 10px #f27751 ;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.controls {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.controls  * {
+    margin: 10px;
+}
+
+.controls  button,label {
+    font-size: calc(.3 * var(--box-size));
+}
+
+.controls  button {
+    background-color:#404674 ;
+    padding: 0.4rem;
+    border-radius: 8px;
+    color: #35b7dfc8;
+}
+#grid {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(9,calc(var(--box-size)));
+    margin: auto;
+    width: calc(9*var(--box-size));
+    background-color: #3d415d;
+    box-shadow: 0 0 15 #7bc2ecb4;
+    padding: 1rem;
+}
+.cell {
+    border: 1px solid black;
+    width: var(--box-size);
+    height: var(--box-size);
+    background-color: #21243acb;
+}
+
+.cell>input {
+    border: none;
+    background: none;
+    height: var(--box-size);
+    line-height: var(--box-size);
+    font-size: var(--box-size);
+    width: var(--box-size);
+    padding: 0;
+    text-align: center;
+    color: #32bee9fd;
+    text-shadow: 0 0 10px #0abaefcb;
+
+}
+
+.cell>input:active,.cell>input:focus {
+    border: none;
+    outline: none;
+    
+}
+.greenHighlight {
+    background-color: var(--green-background);
+    border: 1px solid var(--green-border);
+}
+.subGreenHighlight {
+    background-color: var(--sub-green-background);
+    border: 1px solid var(--green-border);
+}
+
+.redHighlight {
+    background-color: var(--red-background);
+    border: 1px solid var(--red-border);
+}
+.subRedHighlight{
+    background-color: var(--sub-red-background);
+    border: 1px solid var(--red-border);
+}
+.cell > input:disabled {
+    background-color: var(--disabled-background);
+    color: rgb(10, 4, 1);
+}
+
+footer > *{
+    color:#4b5281 ;
+}
